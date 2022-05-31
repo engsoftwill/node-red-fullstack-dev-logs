@@ -1,6 +1,6 @@
 [
     {
-        "id": "12d8321a10d860d1",
+        "id": "f559bbb36e86106d",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -8,38 +8,196 @@
         "env": []
     },
     {
-        "id": "0f40ee4cf3f57ccc",
-        "type": "inject",
-        "z": "12d8321a10d860d1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
+        "id": "cfc556e86d325d66",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7020b72977b98169",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
             },
-            {
-                "p": "topic",
-                "vt": "str"
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
             }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "helloworld",
-        "payloadType": "str",
-        "x": 360,
-        "y": 220,
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "283412491d9fa9db",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "cfc556e86d325d66",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3c03d1050a492412",
+        "type": "image",
+        "z": "f559bbb36e86106d",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 540,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5bc704ae51ed0cbe",
+        "type": "create dataset",
+        "z": "f559bbb36e86106d",
+        "name": "",
+        "path": "",
+        "saveFolder": "",
+        "saveName": "",
+        "input": "",
+        "output": "",
+        "trainingPartition": "",
+        "shuffle": "",
+        "seed": "",
+        "x": 300,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05fccb7caa915053",
+        "type": "predictor",
+        "z": "f559bbb36e86106d",
+        "name": "",
+        "modelPath": "",
+        "modelName": "",
+        "x": 480,
+        "y": 900,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ce1c56494c461672",
+        "type": "ui_webcam",
+        "z": "f559bbb36e86106d",
+        "name": "",
+        "group": "283412491d9fa9db",
+        "order": 0,
+        "width": 0,
+        "height": 5,
+        "countdown": false,
+        "autoStart": false,
+        "hideCaptureButton": false,
+        "showImage": "2",
+        "mirror": true,
+        "format": "jpeg",
+        "x": 240,
+        "y": 920,
         "wires": [
             [
-                "62e69b50ee7ee4e7"
+                "ccf9edb3e01ed8ab"
             ]
         ]
     },
     {
-        "id": "62e69b50ee7ee4e7",
+        "id": "6f57b945fdb090f7",
         "type": "debug",
-        "z": "12d8321a10d860d1",
+        "z": "f559bbb36e86106d",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -48,8 +206,24 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 650,
-        "y": 220,
+        "x": 490,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "ccf9edb3e01ed8ab",
+        "type": "image",
+        "z": "f559bbb36e86106d",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 520,
+        "y": 960,
         "wires": []
     }
 ]
