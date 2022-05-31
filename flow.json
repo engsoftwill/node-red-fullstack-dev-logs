@@ -28,7 +28,7 @@
         "topic": "",
         "payload": "helloworld",
         "payloadType": "str",
-        "x": 380,
+        "x": 360,
         "y": 220,
         "wires": [
             [
